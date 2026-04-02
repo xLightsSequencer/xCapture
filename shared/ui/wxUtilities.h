@@ -93,8 +93,8 @@ inline wxString FixEffectFileParameter(const wxString& paramname, const wxString
 }
 int base64_decode(const wxString& encoded_string, std::vector<unsigned char> &data);
 void OptimiseDialogPosition(wxDialog* dlg);
-nlohmann::json xLightsRequest(int xFadePort, const wxString& request, const std::string& ipAddress = "127.0.0.1");
-bool xLightsRequest(std::string& result, int xFadePort, const wxString& request, const std::string& ipAddress = "127.0.0.1");
+nlohmann::json xCaptureRequest(int xFadePort, const wxString& request, const std::string& ipAddress = "127.0.0.1");
+bool xCaptureRequest(std::string& result, int xFadePort, const wxString& request, const std::string& ipAddress = "127.0.0.1");
 
 wxImage ApplyOrientation(const wxImage& img, int orient);
 AnimatedImageData LoadGIFAnimationDataWx(const std::string& filename);

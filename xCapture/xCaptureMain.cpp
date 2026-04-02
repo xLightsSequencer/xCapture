@@ -17,14 +17,14 @@
 #include <log.h>
 #include <wx/file.h>
 #include <wx/filename.h>
-#include "../xLights/xLightsVersion.h"
+#include "../shared/xCaptureVersion.h"
 #include <wx/debugrpt.h>
 #include <wx/protocol/http.h>
 #include "UniverseEntryDialog.h"
 #include <wx/filedlg.h>
 #include <wx/numdlg.h>
 #include "ResultDialog.h"
-#include "../xLights/ui/setup/IPEntryDialog.h"
+#include "../shared/ui/setup/IPEntryDialog.h"
 
 #ifndef __WXMSW__
 #include <netinet/in.h>
@@ -34,11 +34,11 @@
 #include <ws2tcpip.h>
 #endif
 
-#include "../include/xLights.xpm"
-#include "../include/xLights-16.xpm"
-#include "../include/xLights-32.xpm"
-#include "../include/xLights-64.xpm"
-#include "../include/xLights-128.xpm"
+#include "../include/xCapture.xpm"
+#include "../include/xCapture-16.xpm"
+#include "../include/xCapture-32.xpm"
+#include "../include/xCapture-64.xpm"
+#include "../include/xCapture-128.xpm"
 
 //(*InternalHeaders(xCaptureFrame)
 #include <wx/intl.h>
@@ -230,7 +230,7 @@ xCaptureFrame::xCaptureFrame(wxWindow* parent, const std::string& showdir, const
     wxFlexGridSizer* FlexGridSizer7;
     wxFlexGridSizer* FlexGridSizer8;
 
-    Create(parent, id, _("xLights Capture"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
+    Create(parent, id, _("xCapture"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
     FlexGridSizer1 = new wxFlexGridSizer(0, 1, 0, 0);
     FlexGridSizer1->AddGrowableCol(0);
     FlexGridSizer1->AddGrowableRow(5);
@@ -383,14 +383,14 @@ xCaptureFrame::xCaptureFrame(wxWindow* parent, const std::string& showdir, const
     Connect(ID_E131SOCKET, wxEVT_SOCKET, (wxObjectEventFunction)&xCaptureFrame::OnE131SocketEvent);
     Connect(ID_ARTNETSOCKET, wxEVT_SOCKET, (wxObjectEventFunction)&xCaptureFrame::OnArtNETSocketEvent);
 
-    SetTitle("xLights Capture " + GetDisplayVersionString());
+    SetTitle("xCapture " + GetDisplayVersionString());
 
     wxIconBundle icons;
-    icons.AddIcon(wxIcon(xlights_16_xpm));
-    icons.AddIcon(wxIcon(xlights_32_xpm));
-    icons.AddIcon(wxIcon(xlights_64_xpm));
-    icons.AddIcon(wxIcon(xlights_128_xpm));
-    icons.AddIcon(wxIcon(xlights_xpm));
+    icons.AddIcon(wxIcon(xcapture_16_xpm));
+    icons.AddIcon(wxIcon(xcapture_32_xpm));
+    icons.AddIcon(wxIcon(xcapture_64_xpm));
+    icons.AddIcon(wxIcon(xcapture_128_xpm));
+    icons.AddIcon(wxIcon(xcapture_xpm));
     SetIcons(icons);
 
     ListView_Universes->AppendColumn("Start");
@@ -590,7 +590,7 @@ void xCaptureFrame::CloseSockets(bool force)
 
 void xCaptureFrame::OnAbout(wxCommandEvent& event)
 {
-    auto about = wxString::Format(wxT("xCapture v%s, the xLights packet capturer."), GetDisplayVersionString());
+    auto about = wxString::Format(wxT("xCapture v%s, the E1.31/ArtNet packet capturer."), GetDisplayVersionString());
     wxMessageBox(about, _("Welcome to..."));
 }
 

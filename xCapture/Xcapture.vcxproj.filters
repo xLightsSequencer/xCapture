@@ -1,54 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\xLights\xLightsVersion.cpp" />
+    <ClCompile Include="..\shared\xCaptureVersion.cpp" />
     <ClCompile Include="ResultDialog.cpp" />
     <ClCompile Include="UniverseEntryDialog.cpp" />
     <ClCompile Include="xCaptureApp.cpp" />
     <ClCompile Include="xCaptureMain.cpp" />
-    <ClCompile Include="..\xLights\IPEntryDialog.cpp" />
-    <ClCompile Include="..\xLights\utils\UtilFunctions.cpp" />
-    <ClCompile Include="..\xSchedule\wxJSON\jsonreader.cpp" />
-    <ClCompile Include="..\xSchedule\wxJSON\jsonval.cpp" />
-    <ClCompile Include="..\common\xlBaseApp.cpp" />
-    <ClCompile Include="..\xLights\utils\CurlManager.cpp">
+    <ClCompile Include="..\shared\IPEntryDialog.cpp" />
+    <ClCompile Include="..\shared\utils\UtilFunctions.cpp" />
+    <ClCompile Include="..\json\wxJSON\jsonreader.cpp" />
+    <ClCompile Include="..\json\wxJSON\jsonval.cpp" />
+    <ClCompile Include="..\common\xCaptureBaseApp.cpp" />
+    <ClCompile Include="..\shared\utils\CurlManager.cpp">
       <Filter>utils</Filter>
     </ClCompile>
-    <ClCompile Include="..\xLights\utils\ip_utils.cpp">
+    <ClCompile Include="..\shared\utils\ip_utils.cpp">
       <Filter>utils</Filter>
     </ClCompile>
-    <ClCompile Include="..\xLights\utils\string_utils.cpp">
+    <ClCompile Include="..\shared\utils\string_utils.cpp">
       <Filter>utils</Filter>
     </ClCompile>
-    <ClCompile Include="..\xLights\utils\JobPool.cpp" />
-    <ClCompile Include="..\xLights\utils\TraceLog.cpp" />
+    <ClCompile Include="..\shared\utils\JobPool.cpp" />
+    <ClCompile Include="..\shared\utils\TraceLog.cpp" />
     <ClCompile Include="..\dependencies\pugixml\src\pugixml.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\xLights\xLightsVersion.h" />
+    <ClInclude Include="..\shared\xCaptureVersion.h" />
     <ClInclude Include="ResultDialog.h" />
     <ClInclude Include="UniverseEntryDialog.h" />
     <ClInclude Include="xCaptureApp.h" />
     <ClInclude Include="xCaptureMain.h" />
-    <ClInclude Include="..\xLights\IPEntryDialog.h" />
-    <ClInclude Include="..\xLights\utils\UtilFunctions.h" />
-    <ClInclude Include="..\xSchedule\wxJSON\json_defs.h" />
-    <ClInclude Include="..\xSchedule\wxJSON\jsonreader.h" />
-    <ClInclude Include="..\xSchedule\wxJSON\jsonval.h" />
-    <ClInclude Include="..\common\xlBaseApp.h" />
+    <ClInclude Include="..\shared\IPEntryDialog.h" />
+    <ClInclude Include="..\shared\utils\UtilFunctions.h" />
+    <ClInclude Include="..\json\wxJSON\json_defs.h" />
+    <ClInclude Include="..\json\wxJSON\jsonreader.h" />
+    <ClInclude Include="..\json\wxJSON\jsonval.h" />
+    <ClInclude Include="..\common\xCaptureBaseApp.h" />
     <ClInclude Include="..\common\xlStackWalker.h" />
-    <ClInclude Include="..\xLights\utils/ExternalHooks.h" />
-    <ClInclude Include="..\xLights\utils\CurlManager.h">
+    <ClInclude Include="..\shared\utils/ExternalHooks.h" />
+    <ClInclude Include="..\shared\utils\CurlManager.h">
       <Filter>utils</Filter>
     </ClInclude>
-    <ClInclude Include="..\xLights\utils\ip_utils.h">
+    <ClInclude Include="..\shared\utils\ip_utils.h">
       <Filter>utils</Filter>
     </ClInclude>
-    <ClInclude Include="..\xLights\utils\string_utils.h">
+    <ClInclude Include="..\shared\utils\string_utils.h">
       <Filter>utils</Filter>
     </ClInclude>
-    <ClInclude Include="..\xLights\utils\JobPool.h" />
-    <ClInclude Include="..\xLights\utils\TraceLog.h" />
+    <ClInclude Include="..\shared\utils\JobPool.h" />
+    <ClInclude Include="..\shared\utils\TraceLog.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />

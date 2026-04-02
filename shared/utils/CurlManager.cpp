@@ -13,7 +13,7 @@
 #include "CurlManager.h"
 
 
-#include "../xLightsVersion.h"
+#include "../xCaptureVersion.h"
 #include "string_utils.h"
 
 static std::string resolveContentType(const std::string& type)
@@ -212,7 +212,7 @@ static int urlSeekData(void *userp, curl_off_t offset, int origin) {
     return CURL_SEEKFUNC_OK;
 }
 CURL* CurlManager::createCurl(const std::string& fullUrl, CurlPrivateData** cpd, bool upload) {
-    static std::string USERAGENT = "xLights-" + xlights_version_string;
+    static std::string USERAGENT = "xCapture-" + xcapture_version_string;
 
     const std::string host = getHost(fullUrl);
     HostData* hd = getHostData(host);

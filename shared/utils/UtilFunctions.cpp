@@ -769,12 +769,12 @@ void CheckMemoryUsage(const std::string& reason, bool onchangeOnly) {
 #endif
 }
 
-static bool _isxLights = false;
-bool IsxLights() {
-    return _isxLights;
+static bool _isxCapture = false;
+bool IsxCapture() {
+    return _isxCapture;
 }
-void SetIsxLights(bool val) {
-    _isxLights = val;
+void SetIsxCapture(bool val) {
+    _isxCapture = val;
 }
 
 static std::string _resourcesDir;

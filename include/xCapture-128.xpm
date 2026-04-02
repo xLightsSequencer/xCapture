@@ -1,5 +1,5 @@
 /* XPM */
-static const char * xlights_128_xpm[] = {
+static const char * xcapture_128_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "128 128 256 2",
 "   c #010305",

@@ -14,17 +14,17 @@
 
  // Update these before building a release
 
-#if __has_include("xlights_build_version.h")
-#include "xlights_build_version.h"
+#if __has_include("xcapture_build_version.h")
+#include "xcapture_build_version.h"
 #else
-static const std::string xlights_version_string  = "2026.03.3";
+static const std::string xcapture_version_string  = "2026.03.3";
 #endif
 #ifdef DEBUG
-static const std::string xlights_qualifier       = " DEBUG";
+static const std::string xcapture_qualifier       = " DEBUG";
 #else
-static const std::string xlights_qualifier       = ""; // " BETA,ALPHA,PROD";
+static const std::string xcapture_qualifier       = ""; // " BETA,ALPHA,PROD";
 #endif
-static const std::string xlights_build_date      = __DATE__;
+static const std::string xcapture_build_date      = __DATE__;
 
 const std::string &GetBitness();
 std::string GetDisplayVersionString();

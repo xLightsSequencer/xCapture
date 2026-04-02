@@ -27,8 +27,8 @@
 #include <log.h>
 
 #include "utils/ExternalHooks.h"
-#include "xLightsVersion.h"
-#include "xlBaseApp.h"
+#include "../shared/xCaptureVersion.h"
+#include "xCaptureBaseApp.h"
 #include "xlStackWalker.h"
 
 xlCrashHandler::xlCrashHandler(std::string const& appName) :
@@ -66,7 +66,7 @@ void xlCrashHandler::HandleCrash(bool const isFatalException, std::string const&
             wxMessageBox("If you haven't already, please turn on the system settings to share crash data with the app developers.\n\n To do that, go to:\n"
                          "System Preferences -> Security and Privacy -> Privacy -> Analytics & Improvements\n\n"
                          "and turn on the \"Share Mac Analytics\" setting and also the \"Share with App Developers\" setting.\n\n"
-                         "This provides more information to the xLights developers than just our normal crash logs.");
+                         "This provides more information to the xCapture developers than just our normal crash logs.");
 #endif
 
             wxString backtrace_txt = wxString::Format("%s version %s\n", m_appName.c_str(), GetDisplayVersionString());
@@ -256,7 +256,7 @@ void xlCrashHandler::SendReport(std::string const& appName, std::string const& l
     wxDateTime now = wxDateTime::Now();
     int millis = wxGetUTCTimeMillis().GetLo() % 1000;
 
-    wxString ver = xlights_version_string + xlights_qualifier;
+    wxString ver = xcapture_version_string + xcapture_qualifier;
     ver.Trim();
     for (int x = 0; x < (int)ver.length(); x++) {
         if (ver[x] == ' ') ver[x] = '-';

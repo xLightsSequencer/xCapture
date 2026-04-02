@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 xCapture is a packet capture tool for lighting control protocols. It captures E1.31 (sACN) and Art-Net network traffic and saves it as FSEQ or ESEQ sequence files compatible with xLights and Falcon Player (FPP).
 
-Built on wxWidgets 3.3 (custom fork). Part of the xLights family of tools.
+Built on wxWidgets 3.3 (custom fork).
 
 **Supported platforms:** Linux (Debian 12 / Ubuntu 24.04), Windows 10+.
 
@@ -32,13 +32,13 @@ call build_xCapture_x64.cmd
 ```
 
 ### wxSmith Generated Code
-Some dialogs use wxSmith (wxWidgets RAD tool). Generated code is delimited by `//(* ... //*)` guards in `.cpp`/`.h` files. **Any changes within these guards MUST also be reflected in the corresponding `.wxs` file** in `xCapture/wxsmith/` or `xLights/wxsmith/`. Otherwise the changes will be overwritten the next time the `.wxs` file is opened in wxSmith. If adding new controls, event handlers, or modifying existing ones inside the guards, update the `.wxs` XML to match.
+Some dialogs use wxSmith (wxWidgets RAD tool). Generated code is delimited by `//(* ... //*)` guards in `.cpp`/`.h` files. **Any changes within these guards MUST also be reflected in the corresponding `.wxs` file** in `xCapture/wxsmith/` or `shared/wxsmith/`. Otherwise the changes will be overwritten the next time the `.wxs` file is opened in wxSmith. If adding new controls, event handlers, or modifying existing ones inside the guards, update the `.wxs` XML to match.
 
 wxSmith files in this repo:
 - `xCapture/wxsmith/xCaptureframe.wxs`
 - `xCapture/wxsmith/ResultDialog.wxs`
 - `xCapture/wxsmith/UniverseEntryDialog.wxs`
-- `xLights/wxsmith/IPEntryDialog.wxs`
+- `shared/wxsmith/IPEntryDialog.wxs`
 
 ### Adding New Source Files
 When adding new `.cpp`/`.h` files, the following project files must be updated manually:
@@ -49,10 +49,13 @@ When adding new `.cpp`/`.h` files, the following project files must be updated m
 ## Repository Structure
 
 - **`xCapture/`** — application source files, build project files, wxSmith UI definitions
-- **`xLights/`** — shared utility code from the xLights project (utils, UI helpers, version info)
-- **`common/`** — base application framework (crash handling)
-- **`xSchedule/wxJSON/`** — JSON parsing library
-- **`include/`** — shared headers (globals.h, log.h), icon assets, nlohmann/json
+- **`shared/`** — shared utility code (utils, UI helpers, version info, timer); originally from xLights
+  - `shared/xCaptureVersion.h/.cpp` — version constants (`xcapture_version_string`, etc.)
+  - `shared/utils/` — utility libraries (JobPool, CurlManager, UtilFunctions, etc.)
+  - `shared/ui/` — UI helpers (wxUtilities, IPEntryDialog, xCaptureTimer)
+- **`common/`** — base application framework (`xCaptureBaseApp`, crash handling)
+- **`json/wxJSON/`** — JSON parsing library
+- **`include/`** — shared headers (globals.h, log.h), icon assets (.xpm), nlohmann/json
 - **`dependencies/`** — pugixml (submodule), spdlog (submodule), stb image headers
 
 ## Code Style
@@ -73,4 +76,4 @@ When adding new `.cpp`/`.h` files, the following project files must be updated m
 
 ## Key Dependencies
 
-wxWidgets 3.3 (custom fork `xLightsSequencer/wxWidgets`), spdlog, libcurl, pugixml.
+wxWidgets 3.3 (custom fork `xLightsSequencer/wxWidgets`, branch `xlights_2026.04`), spdlog, libcurl, pugixml.

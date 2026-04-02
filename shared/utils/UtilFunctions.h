@@ -153,8 +153,8 @@ bool IsInSameSubnet(const std::string& ip1, const std::string& ip2, const std::s
 void CheckMemoryUsage(const std::string& reason, bool onchangeOnly = false);
 uint64_t GetPhysicalMemorySizeMB();
 
-bool IsxLights();
-void SetIsxLights(bool val);
+bool IsxCapture();
+void SetIsxCapture(bool val);
 std::string GetResourcesDir();
 void SetResourcesDir(const std::string& dir);
 std::string ReverseCSV(const std::string& csv);

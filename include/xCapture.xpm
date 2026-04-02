@@ -1,5 +1,5 @@
 /* XPM */
-static const char *xlights_xpm[] = {
+static const char *xcapture_xpm[] = {
 /* width height num_colors chars_per_pixel */
 "194 290 251 2", 
 /* colors */

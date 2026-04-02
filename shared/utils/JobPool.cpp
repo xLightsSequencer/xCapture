@@ -21,7 +21,7 @@
 
 #include <map>
 
-#include "../common/xlBaseApp.h"
+#include "../common/xCaptureBaseApp.h"
 #include "JobPool.h"
 
 #ifdef LINUX
