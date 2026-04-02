@@ -49,10 +49,10 @@ When adding new `.cpp`/`.h` files, the following project files must be updated m
 ## Repository Structure
 
 - **`xCapture/`** — application source files, build project files, wxSmith UI definitions
-- **`shared/`** — shared utility code (utils, UI helpers, version info, timer); originally from xLights
+- **`shared/`** — shared utility code (originally from xLights, trimmed to what xCapture needs)
   - `shared/xCaptureVersion.h/.cpp` — version constants (`xcapture_version_string`, etc.)
-  - `shared/utils/` — utility libraries (JobPool, CurlManager, UtilFunctions, etc.)
-  - `shared/ui/` — UI helpers (wxUtilities, IPEntryDialog, xCaptureTimer)
+  - `shared/utils/` — `JobPool`, `TraceLog`, `ip_utils`, `string_utils`, `ExternalHooks.h`
+  - `shared/ui/` — `IPEntryDialog`, `xCaptureTimer`
 - **`common/`** — base application framework (`xCaptureBaseApp`, crash handling)
 - **`json/wxJSON/`** — JSON parsing library
 - **`include/`** — shared headers (globals.h, log.h), icon assets (.xpm), nlohmann/json
@@ -76,4 +76,4 @@ When adding new `.cpp`/`.h` files, the following project files must be updated m
 
 ## Key Dependencies
 
-wxWidgets 3.3 (custom fork `xLightsSequencer/wxWidgets`, branch `xlights_2026.04`), spdlog, libcurl, pugixml.
+wxWidgets 3.3 (custom fork `xLightsSequencer/wxWidgets`, branch `xlights_2026.04`), spdlog, pugixml, nlohmann/json.
