@@ -202,9 +202,6 @@ void InitialiseLogging(bool fromMain)
         auto rotating_file_sink = std::make_shared<spdlog::sinks::rotating_file_sink_mt>(logFilePath, 1024 * 1024 * 10, 10);
 
         auto file_logger = std::make_shared<spdlog::logger>("xCapture", rotating_file_sink);
-        auto curl_logger = std::make_shared<spdlog::logger>("curl", rotating_file_sink);
-
-        spdlog::register_logger(curl_logger);
 
         loggingInitialised = true;
         spdlog::initialize_logger(file_logger);

@@ -105,9 +105,6 @@
     <ClCompile Include="..\shared\ui\shared\utils\xCaptureTimer.cpp" />
     <ClCompile Include="..\shared\utils\JobPool.cpp" />
     <ClCompile Include="..\shared\utils\TraceLog.cpp" />
-    <ClCompile Include="..\shared\utils\UtilFunctions.cpp" />
-    <ClCompile Include="..\shared\ui\wxUtilities.cpp" />
-    <ClCompile Include="..\shared\utils\CurlManager.cpp" />
     <ClCompile Include="..\shared\utils\ip_utils.cpp" />
     <ClCompile Include="..\shared\utils\string_utils.cpp" />
     <ClCompile Include="..\shared\xCaptureVersion.cpp" />
@@ -127,9 +124,6 @@
     <ClInclude Include="..\shared\ui\shared\utils\xCaptureTimer.h" />
     <ClInclude Include="..\shared\utils\JobPool.h" />
     <ClInclude Include="..\shared\utils\TraceLog.h" />
-    <ClInclude Include="..\shared\utils\UtilFunctions.h" />
-    <ClInclude Include="..\shared\ui\wxUtilities.h" />
-    <ClInclude Include="..\shared\utils\CurlManager.h" />
     <ClInclude Include="..\shared\utils\ip_utils.h" />
     <ClInclude Include="..\shared\utils\string_utils.h" />
     <ClInclude Include="..\shared\xCaptureVersion.h" />

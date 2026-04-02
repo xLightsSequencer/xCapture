@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="..\shared\xCaptureVersion.cpp" />
@@ -6,14 +6,11 @@
     <ClCompile Include="UniverseEntryDialog.cpp" />
     <ClCompile Include="xCaptureApp.cpp" />
     <ClCompile Include="xCaptureMain.cpp" />
-    <ClCompile Include="..\shared\IPEntryDialog.cpp" />
-    <ClCompile Include="..\shared\utils\UtilFunctions.cpp" />
+    <ClCompile Include="..\shared\ui\setup\IPEntryDialog.cpp" />
+    <ClCompile Include="..\shared\ui\shared\utils\xCaptureTimer.cpp" />
     <ClCompile Include="..\json\wxJSON\jsonreader.cpp" />
     <ClCompile Include="..\json\wxJSON\jsonval.cpp" />
     <ClCompile Include="..\common\xCaptureBaseApp.cpp" />
-    <ClCompile Include="..\shared\utils\CurlManager.cpp">
-      <Filter>utils</Filter>
-    </ClCompile>
     <ClCompile Include="..\shared\utils\ip_utils.cpp">
       <Filter>utils</Filter>
     </ClCompile>
@@ -30,17 +27,14 @@
     <ClInclude Include="UniverseEntryDialog.h" />
     <ClInclude Include="xCaptureApp.h" />
     <ClInclude Include="xCaptureMain.h" />
-    <ClInclude Include="..\shared\IPEntryDialog.h" />
-    <ClInclude Include="..\shared\utils\UtilFunctions.h" />
+    <ClInclude Include="..\shared\ui\setup\IPEntryDialog.h" />
+    <ClInclude Include="..\shared\ui\shared\utils\xCaptureTimer.h" />
     <ClInclude Include="..\json\wxJSON\json_defs.h" />
     <ClInclude Include="..\json\wxJSON\jsonreader.h" />
     <ClInclude Include="..\json\wxJSON\jsonval.h" />
     <ClInclude Include="..\common\xCaptureBaseApp.h" />
     <ClInclude Include="..\common\xlStackWalker.h" />
-    <ClInclude Include="..\shared\utils/ExternalHooks.h" />
-    <ClInclude Include="..\shared\utils\CurlManager.h">
-      <Filter>utils</Filter>
-    </ClInclude>
+    <ClInclude Include="..\shared\utils\ExternalHooks.h" />
     <ClInclude Include="..\shared\utils\ip_utils.h">
       <Filter>utils</Filter>
     </ClInclude>

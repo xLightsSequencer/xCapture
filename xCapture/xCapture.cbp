@@ -19,7 +19,6 @@
 					<Add option="-std=gnu++20" />
 					<Add option="-g" />
 					<Add option="`wx-config --version=3.3 --cflags`" />
-					<Add option="`pkg-config --cflags gstreamer-1.0 gstreamer-video-1.0`" />
 					<Add option="-Winvalid-pch" />
 					<Add option="-DWX_PRECOMP" />
 					<Add option="-DLINUX" />
@@ -35,10 +34,8 @@
 					<Add directory="../dependencies/spdlog/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-lGL -lGLU -lglut -ldl -lX11 -lcurl" />
-					<Add option="`wx-config --version=3.3 --libs std,media,gl,aui,propgrid`" />
-					<Add option="`pkg-config --libs gstreamer-1.0 gstreamer-video-1.0`" />
-					<Add option="-lexpat" />
+					<Add option="-ldl -lX11" />
+					<Add option="`wx-config --version=3.3 --libs std`" />
 					<Add option="-rdynamic" />
 				</Linker>
 			</Target>
@@ -54,7 +51,6 @@
 					<Add option="-std=gnu++20" />
 					<Add option="-Wall" />
 					<Add option="`wx-config --version=3.3 --cflags`" />
-					<Add option="`pkg-config --cflags gstreamer-1.0 gstreamer-video-1.0`" />
 					<Add option="-Winvalid-pch" />
 					<Add option="-DWX_PRECOMP" />
 					<Add option="-DLINUX" />
@@ -70,10 +66,8 @@
 					<Add directory="../dependencies/spdlog/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-lGL -lGLU -lglut -ldl -lX11 -lcurl" />
-					<Add option="`wx-config --version=3.3 --libs std,media,gl,aui,propgrid`" />
-					<Add option="`pkg-config --libs gstreamer-1.0 gstreamer-video-1.0`" />
-					<Add option="-lexpat" />
+					<Add option="-ldl -lX11" />
+					<Add option="`wx-config --version=3.3 --libs std`" />
 					<Add option="-rdynamic" />
 				</Linker>
 			</Target>
@@ -95,19 +89,9 @@
 		<Unit filename="../shared/ui/setup/IPEntryDialog.h" />
 		<Unit filename="../shared/utils/JobPool.cpp" />
 		<Unit filename="../shared/utils/JobPool.h" />
-		<Unit filename="../shared/utils/Parallel.cpp" />
-		<Unit filename="../shared/utils/Parallel.h" />
 		<Unit filename="../shared/utils/TraceLog.cpp" />
 		<Unit filename="../shared/utils/TraceLog.h" />
 		<Unit filename="../dependencies/pugixml/src/pugixml.cpp" />
-		<Unit filename="../shared/utils/UtilFunctions.cpp" />
-		<Unit filename="../shared/utils/UtilFunctions.h" />
-		<Unit filename="../shared/ui/wxUtilities.cpp" />
-		<Unit filename="../shared/ui/wxUtilities.h" />
-		<Unit filename="../shared/utils/xlImage.cpp" />
-		<Unit filename="../shared/utils/xlImage.h" />
-		<Unit filename="../shared/utils/CurlManager.cpp" />
-		<Unit filename="../shared/utils/CurlManager.h" />
 		<Unit filename="../shared/utils/ip_utils.cpp" />
 		<Unit filename="../shared/utils/ip_utils.h" />
 		<Unit filename="../shared/utils/string_utils.cpp" />
