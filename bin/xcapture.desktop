@@ -5,6 +5,6 @@ Exec=xCapture %f
 Comment=Capture of e1.31
 Name=xCapture
 Terminal=false
-Icon=xlights
+Icon=xcapture
 Categories=AudioVideo;
 MimeType=text/xml;

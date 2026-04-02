@@ -43,14 +43,18 @@ clean:
 
 #############################################################################
 
+ICON_SIZES      = 16x16 32x32 64x64 128x128 256x256
+
 install:
 	@$(CHK_DIR_EXISTS) $(DESTDIR)/${PREFIX}/bin || $(MKDIR) $(DESTDIR)/${PREFIX}/bin
 	-$(INSTALL_PROGRAM) -D bin/xCapture $(DESTDIR)/${PREFIX}/bin/xCapture
 	-$(INSTALL_PROGRAM) -D bin/xcapture.desktop $(DESTDIR)/${PREFIX}/share/applications/xcapture.desktop
+	$(foreach size, $(ICON_SIZES), install -D -m 644 images/icons/$(size).png $(DESTDIR)/${PREFIX}/share/icons/hicolor/$(size)/apps/xcapture.png ; )
 
 uninstall:
 	-$(DEL_FILE) $(DESTDIR)/${PREFIX}/bin/xCapture
 	-$(DEL_FILE) $(DESTDIR)/${PREFIX}/share/applications/xcapture.desktop
+	$(foreach size, $(ICON_SIZES), $(DEL_FILE) $(DESTDIR)/${PREFIX}/share/icons/hicolor/$(size)/apps/xcapture.png ; )
 
 #############################################################################
 
