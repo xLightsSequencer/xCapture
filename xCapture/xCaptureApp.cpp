@@ -130,7 +130,6 @@ std::string DecodeOS(wxOperatingSystemId o)
 void DumpConfig()
 {
     spdlog::info("Version: " + std::string(xcapture_version_string.c_str()));
-    spdlog::info("Bits: " + std::string(GetBitness().c_str()));
     spdlog::info("Build Date: " + std::string(xcapture_build_date.c_str()));
     spdlog::info("Machine configuration:");
     wxMemorySize s = wxGetFreeMemory();
