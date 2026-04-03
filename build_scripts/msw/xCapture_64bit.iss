@@ -30,9 +30,6 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "D
 Source: "../../xCapture/x64/Release/xCapture.exe"; DestDir: "{app}"
 Source: "../../include\xcapture64.ico"; DestDir: "{app}"; Flags: "ignoreversion"
 
-; libcurl
-Source: "../../bin/libcurl-x64.dll"; DestDir: "{app}"; Flags: "ignoreversion"
-
 ; readmes and licenses
 Source: "../../LICENSE"; DestDir: "{app}";
 
